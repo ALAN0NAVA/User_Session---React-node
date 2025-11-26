@@ -1,1 +1,57 @@
-.
+# 📦 Dependencias
+node_modules
+.pnpm-store
+.yarn
+yarn-error.log
+npm-debug.log
+bun.lockb
+package-lock.json
+
+# ⚡ Vite
+dist
+dist-ssr
+*.local
+
+# 🛠 Entorno / secretos
+.env
+.env.*
+!.env.example
+
+# 🧠 Cache / configs de editor
+.vscode
+.vite
+.DS_Store
+*.log
+*.tsbuildinfo
+*.swp
+
+# 🧪 Testing
+coverage
+
+# 🧩 Builds y debug
+*.sourcemap
+*.map
+debug.log
+
+# 🖼 Assets generados
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.mp4
+*.mov
+*.ogg
+*.mp3
+*.wav
+
+# 🧪 Variables de entorno locales específicas
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 🔐 Next/other (si los llegas a usar)
+.vercel
+.netlify
+.output
