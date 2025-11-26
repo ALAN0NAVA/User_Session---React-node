@@ -8,4 +8,5 @@ export const router = Router()
 router.post('/login', controller.login)
 router.post('/register', (controller.register))
 router.post('/session', controller.session)
-router.get('/logout', controller.logout)
+router.post('/logout', controller.logout)
+
