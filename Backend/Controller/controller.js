@@ -31,7 +31,6 @@ export class Controller {
       const id = await this.userRepository.create({ username, password })
       res
         .clearCookie('access_token', {
-          httpOnly: true,
           secure: true,
           sameSite: 'lax'
         })
@@ -47,7 +46,6 @@ export class Controller {
   logout = async (req, res) => {
     res
       .clearCookie('access_token', {
-        httpOnly: true,
         secure: true,
         sameSite: 'lax'
       })
@@ -59,5 +57,6 @@ export class Controller {
     res.render('index', user)
   }
 }
+
 
 
