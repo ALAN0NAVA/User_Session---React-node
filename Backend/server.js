@@ -11,7 +11,8 @@ app.use(express.json())
 app.use(cors({
   origin: 'https://user-session-react-node.vercel.app',
   // origin: 'http://localhost:5173',
-  credentials: true
+  credentials: true,
+  methods: ["GET", "POST"]
 }))
 app.use(cookieParser())
 app.disable('x-powered-by') // disable header that shows that the server is using expressdd
@@ -36,4 +37,5 @@ const PORT = process.env.PORT ?? 8080 // to use the port defined in environment 
 app.listen(PORT, () => {
   console.log(`server listening on port http://localhost:${PORT}`)
 })
+
 
