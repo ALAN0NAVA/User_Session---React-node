@@ -157,13 +157,13 @@ export function App () {
   }, [])
 
   const fetchCloseSession = async () =>{
-    console.log("🔥 LOGOUT ENDPOINT HIT"); 
     const res = await fetch(`${import.meta.env.VITE_API_URL}/session/logout`, {
       method: "POST",
       credentials: 'include', 
     });
     if (res.ok) {
       const data = await res.json()
+      console.log(data.message); 
       setTimeout(() => navigate('/login'), 1000);
     }else {
       
