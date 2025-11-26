@@ -15,8 +15,8 @@ export class Controller {
       res
         .cookie('access_token', token, {
           httpOnly: true, // la cookie solo se puede acceder en el servidor
-          secure: false, // solo se accede en https
-          sameSite: 'lax', // solo se puede acceder en el mismo dominio
+          secure: true, // solo se accede en https
+          sameSite: "none", // solo se puede acceder en el mismo dominio
           maxAge: 1000 * 60 * 60 // validez de una hora
         })
         .send({ user, token })
@@ -51,3 +51,4 @@ export class Controller {
     res.render('index', user)
   }
 }
+
