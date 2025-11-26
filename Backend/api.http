@@ -1,0 +1,20 @@
+POST http://localhost:8080/session/register
+Content-Type: application/json
+
+{
+  "username": "aava",
+  "password": "123456"
+} 
+###
+POST http://localhost:8080/session/login
+Content-Type: application/json
+
+{
+  "username": "alan",
+  "password": "123456"
+}   
+###
+GET http://localhost:8080/checkSesion
+
+###
+GET http://localhost:8080/session/logout
