@@ -140,8 +140,7 @@ export function App () {
 
   
   const fetchSesion = async () => {
-    try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/checkSesion`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/checkSesion`, {
         method: "GET",
         credentials: "include" 
       })
@@ -151,9 +150,6 @@ export function App () {
       } else {
         setCurrentSesion(null)
       }
-    } catch (error) {
-        setCurrentSesion(null)
-    }
   }
 
   useEffect(() => {
@@ -161,17 +157,15 @@ export function App () {
   }, [])
 
   const fetchCloseSession = async () =>{
-    try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/session/logout`, {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/session/logout`, {
       method: "GET",
       credentials: 'include', 
     });
     if (res.ok) {
       const data = await res.json()
       setTimeout(() => navigate('/login'), 1000);
-    }
-    } catch (error) {
-      <span>Error</span>
+    }else {
+      
     }
   }
 
