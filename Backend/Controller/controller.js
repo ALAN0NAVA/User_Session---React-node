@@ -32,7 +32,7 @@ export class Controller {
       res
         .clearCookie('access_token', {
           secure: true,
-          sameSite: 'lax'
+          sameSite: "none"
         })
         .json({ message: 'Logout Successful' })
         .send({ id })
@@ -47,7 +47,7 @@ export class Controller {
     res
       .clearCookie('access_token', {
         secure: true,
-        sameSite: 'lax'
+        sameSite: "none"
       })
       .json({ message: 'Logout Successful' })
   }
@@ -57,6 +57,7 @@ export class Controller {
     res.render('index', user)
   }
 }
+
 
 
 
