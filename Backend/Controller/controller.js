@@ -30,7 +30,11 @@ export class Controller {
     try {
       const id = await this.userRepository.create({ username, password })
       res
-        .clearCookie('access_token')
+        .clearCookie('access_token', {
+          httpOnly: true,
+          secure: true,
+          sameSite: 'lax'
+        })
         .json({ message: 'Logout Successful' })
         .send({ id })
     } catch (error) {
@@ -42,7 +46,11 @@ export class Controller {
 
   logout = async (req, res) => {
     res
-      .clearCookie('access_token')
+      .clearCookie('access_token', {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'lax'
+      })
       .json({ message: 'Logout Successful' })
   }
 
@@ -51,4 +59,5 @@ export class Controller {
     res.render('index', user)
   }
 }
+
 
