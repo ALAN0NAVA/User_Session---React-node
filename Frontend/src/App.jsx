@@ -158,7 +158,7 @@ export function App () {
 
   const fetchCloseSession = async () =>{
     const res = await fetch(`${import.meta.env.VITE_API_URL}/session/logout`, {
-      method: "GET",
+      method: "POST",
       credentials: 'include', 
     });
     if (res.ok) {
