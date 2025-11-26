@@ -1,6 +1,6 @@
 import DBLocal from 'db-local'
 import bcrypt from 'bcrypt'
-import { validateUser } from '../validations/validateUser.js'
+import { validateUser } from '../Validations/validateUser.js'
 
 import crypto from 'node:crypto'
 
@@ -50,3 +50,4 @@ export class UserRepository {
     return publicUser
   }
 }
+
