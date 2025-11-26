@@ -157,7 +157,7 @@ export function App () {
   }, [])
 
   const fetchCloseSession = async () =>{
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/logout`, {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/session/logout`, {
       method: "POST",
       credentials: 'include', 
     });
@@ -166,7 +166,7 @@ export function App () {
       console.log(data.message); 
       setTimeout(() => navigate('/login'), 1000);
     }else {
-      
+      console.log("Error"); 
     }
   }
 
