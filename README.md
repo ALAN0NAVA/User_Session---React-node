@@ -23,7 +23,7 @@ https://user-session-react-node.vercel.app/login
 | **Database** | MongoDB, Mongoose ODM |
 | **Security & Validation** | bcrypt password hashing, Zod schema validation, CORS, cookie flags (httpOnly, secure, sameSite) |
 | **Deploy** | Render (backend), Vercel (frontend) |
-| **Frontend Integration** | Fetch API + Axios requests, JWT stored in cookies for session persistence |
+| **Frontend Integration** | Fetch API, JWT stored in cookies for session persistence |
 
 ---
 
